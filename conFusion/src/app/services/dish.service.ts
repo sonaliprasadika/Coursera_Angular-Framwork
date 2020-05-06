@@ -13,4 +13,12 @@ export class DishService {
   getDishes(): Dish[] {
     return DISHES;
   }
+// return the dish corresponfing to the dish id
+  getDish(id: string): Dish {
+    return DISHES.filter((dish) => (dish.id === id))[0];
+  }
+// if dishfeatured is true it will return the corresponding dish
+  getFeaturedDish(): Dish {
+    return DISHES.filter((dish) => dish.featured)[0];
+  }
 }
